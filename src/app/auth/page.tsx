@@ -44,7 +44,7 @@ export default function AuthPage() {
                                              className="absolute bottom-0 left-[5%] right-auto top-[26%] inline-block"/>
                                         <input type="email"
                                                className="mb-4 block h-9 w-full border border-black bg-[#f2f2f7] px-3 py-6 pl-14 text-sm text-[#333333]"
-                                               maxLength="256" name="name" placeholder="Email Address" required=""/>
+                                               maxLength={256} name="name" placeholder={"Email Address"} required={true}/>
                                     </div>
                                     <div className="relative mb-4">
                                         <img alt=""
@@ -52,12 +52,12 @@ export default function AuthPage() {
                                              className="absolute bottom-0 left-[5%] right-auto top-[26%] inline-block"/>
                                         <input type="password"
                                                className="mb-4 block h-9 w-full border border-black bg-[#f2f2f7] px-3 py-6 pl-14 text-sm text-[#333333]"
-                                               placeholder="Password (min 8 characters)" required=""/>
+                                               placeholder={"Password (min 8 characters)"} required={true}/>
                                     </div>
                                     {/* Сheckbox */}
                                     <label className="mb-6 flex items-center pb-12 font-medium lg:mb-1">
                                         <input type="checkbox" name="checkbox"/>
-                                        <span className="ml-4 inline-block cursor-pointer text-sm" htmlFor="checkbox">I agree with the <a
+                                        <span className="ml-4 inline-block cursor-pointer text-sm">I agree with the <a
                                             href="#" className="font-bold text-[#0b0b1f]">Terms &amp; Conditions</a> </span>
                                     </label>
                                     {/* Button */}
@@ -91,7 +91,7 @@ export default function AuthPage() {
                                              className="absolute bottom-0 left-[5%] right-auto top-[26%] inline-block"/>
                                         <input type="email"
                                                className="mb-4 block h-9 w-full border border-black bg-[#f2f2f7] px-3 py-6 pl-14 text-sm text-[#333333]"
-                                               maxLength="256" name="name" placeholder="Email Address" required=""/>
+                                               maxLength={256} name="name" placeholder={"Email Address"} required={true}/>
                                     </div>
                                     <div className="relative mb-4">
                                         <img alt=""
@@ -99,12 +99,12 @@ export default function AuthPage() {
                                              className="absolute bottom-0 left-[5%] right-auto top-[26%] inline-block"/>
                                         <input type="password"
                                                className="mb-4 block h-9 w-full border border-black bg-[#f2f2f7] px-3 py-6 pl-14 text-sm text-[#333333]"
-                                               placeholder="Password (min 8 characters)" required=""/>
+                                               placeholder={"Password (min 8 characters)"} required={true}/>
                                     </div>
                                     {/* Сheckbox */}
                                     <label className="mb-6 flex items-center pb-12 font-medium lg:mb-1">
                                         <input type="checkbox" name="checkbox"/>
-                                        <span className="ml-4 inline-block cursor-pointer text-sm" htmlFor="checkbox">I agree with the <a
+                                        <span className="ml-4 inline-block cursor-pointer text-sm">I agree with the <a
                                             href="#" className="font-bold text-[#0b0b1f]">Terms &amp; Conditions</a> </span>
                                     </label>
                                     {/* Button */}

@@ -1,6 +1,6 @@
-export default function PaySuccess({width, height}) {
+export default function PaySuccess({width, height}:{width:number, height:number}) {
     return (
-        <svg t="1718500528714" className="icon" viewBox="0 0 1324 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        <svg className="icon" viewBox="0 0 1324 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
              p-id="4282" width={width} height={height}>
             <path
                 d="M384.27136 368.22016l279.17824-357.376q15.07328-19.31264 34.38592-4.23936l241.57184 188.65664q19.31264 15.07328 4.23936 34.38592l-279.04 357.376q-15.07328 19.31264-34.38592 4.23936l-241.49504-188.416q-19.62496-15.3088-4.47488-34.62144z"

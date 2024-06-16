@@ -2,9 +2,8 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
 export async function POST(request: Request) {
-    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-        apiVersion: process.env.API_VERSION!,
-    });
+    const apiVersion: string = process.env.API_VERSION!;
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
     const { planId } = await request.json();
 
