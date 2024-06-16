@@ -3,7 +3,7 @@ import Stripe from "stripe";
 
 export async function POST(request: Request) {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-        apiVersion: process.env.API_VERSION,
+        apiVersion: process.env.API_VERSION!,
     });
 
     const { planId } = await request.json();

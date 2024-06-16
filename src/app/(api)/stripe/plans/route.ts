@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-        apiVersion: "2022-11-15",
+        apiVersion: process.env.API_VERSION!,
     });
     const stripeResponse = await stripe.prices.list({
         type: 'recurring',
