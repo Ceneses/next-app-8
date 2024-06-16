@@ -1,7 +1,7 @@
 import {redirect} from "next/navigation";
 import {createClient} from "@/utils/supabase/client";
 
-export default function SignIn({handleSwitchMode}: {handleSwitchMode: Function}) {
+export default function SignIn({handleSwitchMode}: {handleSwitchMode: any}) {
     const handleLogin = async () => {
         const supabase = createClient();
         const {data, error} = await supabase.auth.signInWithPassword({

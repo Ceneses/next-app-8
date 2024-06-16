@@ -1,4 +1,4 @@
-export default function SignUp({handleSwitchMode}:{handleSwitchMode: Function}) {
+export default function SignUp({handleSwitchMode}:{handleSwitchMode: any}) {
     return (
         <div className="max-w-lg px-5 py-16 text-center md:px-10 md:py-24 lg:py-32">
             {/* Title */}
