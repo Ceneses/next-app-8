@@ -1,4 +1,6 @@
-export default function SignUp({handleSwitchMode}:{handleSwitchMode: any}) {
+import Link from "next/link";
+
+export default function SignUp() {
     return (
         <div className="max-w-lg px-5 py-16 text-center md:px-10 md:py-24 lg:py-32">
             {/* Title */}
@@ -28,7 +30,7 @@ export default function SignUp({handleSwitchMode}:{handleSwitchMode: any}) {
                         href="#" className="font-bold text-[#0b0b1f]">Terms &amp; Conditions</a> </span>
                 </label>
                 {/* Button */}
-                <button onClick={handleSwitchMode}
+                <button
                         className="w-full flex items-center justify-center bg-[#276ef1] px-8 py-4 text-center font-semibold text-white transition [box-shadow:rgb(171,_196,_245)_-8px_8px] hover:[box-shadow:rgb(171,_196,_245)_0px_0px]">
                     <p className="mr-6 font-bold">Sign Up</p>
                     <svg className="h-4 w-4 flex-none" fill="currentColor" viewBox="0 0 20 21"
@@ -39,9 +41,10 @@ export default function SignUp({handleSwitchMode}:{handleSwitchMode: any}) {
                     </svg>
                 </button>
             </form>
-            <p className="text-sm text-[#636262]">Already have an account? <button onClick={handleSwitchMode}
-                                                                                   className="text-sm font-bold text-black">Login
-                now</button></p>
+            <p className="text-sm text-[#636262]">Already have an account?
+                <Link href={"/signIn"}
+                            className="text-sm font-bold text-black">Login Now</Link>
+            </p>
         </div>
     );
 }

@@ -1,14 +1,16 @@
 import {redirect} from "next/navigation";
-import {createClient} from "@/utils/supabase/client";
+import {createClient} from "@/utils/supabase/server";
+import Link from "next/link";
 
-export default function SignIn({handleSwitchMode}: {handleSwitchMode: any}) {
+export default function SignIn() {
     const handleLogin = async () => {
+        "use server";
         const supabase = createClient();
         const {data, error} = await supabase.auth.signInWithPassword({
             email: "wo51study@163.com",
             password: "wo51study@163.com"
         })
-        console.log("data = ",data);
+        console.log("data = ", data);
         if (error) {
             throw new Error("账号或密码错误,登录失败!")
         }
@@ -54,9 +56,12 @@ export default function SignIn({handleSwitchMode}: {handleSwitchMode: any}) {
                     </svg>
                 </button>
             </form>
-            <p className="text-sm text-[#636262]">Don't have an account? <button onClick={handleSwitchMode}
-                                                                                 className="text-sm font-bold text-black">SignUp
-                now</button></p>
+            <p className="text-sm text-[#636262]">Don't have an account?
+                <Link href={"/signUp"}
+                        className="text-sm font-bold text-black">
+                    SignUp Now
+                </Link>
+            </p>
         </div>
     );
 }

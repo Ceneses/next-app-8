@@ -1,15 +1,6 @@
-"use client";
-import {useState} from "react";
-import SignIn from "@/components/SignIn";
 import SignUp from "@/components/SignUp";
 
 export default function AuthPage() {
-    const [login, setLogin] = useState<boolean>(true);
-
-    const handleSwitchMode = () => {
-        setLogin(!login);
-    }
-
     return (
         <div className={"w-full h-[calc(100vh - 64px)]"}>
             {/* Container */}
@@ -33,13 +24,7 @@ export default function AuthPage() {
                 </div>
                 {/* Component */}
                 <div className="flex flex-col items-center justify-center bg-white">
-                    {
-                        login ? (
-                            <SignIn handleSwitchMode={handleSwitchMode}/>
-                        ):(
-                            <SignUp handleSwitchMode={handleSwitchMode}/>
-                        )
-                    }
+                    <SignUp/>
                 </div>
             </div>
         </div>
